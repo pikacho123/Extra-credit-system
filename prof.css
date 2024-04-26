@@ -1,0 +1,53 @@
+body {
+    display: flex;
+   }
+
+  header {
+     background-color: #358d9d;
+    color: #fff;
+    width: 150px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+   }
+
+  header a {
+    color: white;
+    text-direction: none;
+    padding: 12px;
+    display:block;
+   }
+   
+   main {
+     flex: 1;
+     display: flex;
+   }
+  
+   .main {
+      flex: 4;
+      background-color: rgb(248,246,246);
+      padding: 20px;
+   }
+    
+   .main .card {
+     background-color: #fff;
+     border-radius: 18px;
+     box-shadow: 1px 1px 8px 0 grey;
+     height: auto;
+     margin-bottom: 20px;
+     padding: 20px 0 20px 50px;
+   }
+
+   .main .card table {
+     border: none;
+     font-weight: bold;
+     font-size: 16px;
+     height: 270px;
+     width: 50%;
+ }
+
+ .edit {
+     position: absolute;
+     color: #358d9d;
+     right: 14%;
+ }  

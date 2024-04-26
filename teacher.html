@@ -1,0 +1,20 @@
+<head>
+	<link rel="stylesheet" type+"text/css" href="teacher.css">
+</head>
+<body>
+	<div class="page-center"><div>
+	<div class="login-container">
+		<form id="login-form" action="teacher.php" method="POST">
+			<h2>Teacher Login</h2>
+			<label for="username">teach_empid:</label>
+			<input type="text" id="teach_empid" name ="username" placeholder="Enter your username" required>
+			<label for="password">Password:</label>
+			<input type="password" id="teach_pass"  name = "password" placeholder="Enter your password" required>
+			<button type="submit" id="login-btn">Log In</button>
+			<a href="Tforgotpass.php" class="forgotpass">Forgot Password?</a>
+			<div id="error-message"></div>
+			<p> Don't have an account?<a href="signupteacher.php">Sign Up</a></p>
+		</form>
+	</div>
+	<!--<script type="text/javascript" src="teacher.js"></script>-->
+</body>

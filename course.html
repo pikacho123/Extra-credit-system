@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Course Selection Form</title>
+	<link rel="stylesheet" type="text/css" href="course.css">
+</head>
+<body>
+	<h1>Course Selection Form</h1>
+	<form action="#" method="post" enctype="multipart/form-data">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required><br><br>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+		<label for="course">Course:</label>
+		<select id="course" name="course">
+			<option value="SOEC">SOEC</option>
+			<option value="INTERNSHIP">INTERNSHIP</option>
+			<option value="SPORTS">SPORTS</option>
+			<option value="CERTIFICATE COURSE">CERTIFICATE COURSE</option>
+		</select><br><br>
+		<label for="certification">Certification:</label>
+		<input type="file" id="certification" name="certification"><br><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

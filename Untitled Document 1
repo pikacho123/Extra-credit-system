@@ -1,0 +1,181 @@
+<////script type="text/javascript">
+   $("#registration-form").ready(function()
+   {
+     
+
+      //Username Validation
+      $("#uid").keyup(function(){
+         var uid = $(this).val();
+         $.ajax({
+            url: 'validate_username.php',
+            method:"POST",
+            data: {uid: uid},
+            success: function(data){
+               if(data != '0')
+               {
+                  $("#uid").css("border","2px solid red");
+                  $('#uidMsg').html('<span class="text-success"></span>');
+
+               }
+               else
+               {
+                  $("#uid").css("border","2px solid green");
+                  $('#uidMsg').html('<span class="text-danger"></span>');
+
+               }
+         }
+         })
+      });
+
+      //Email Validation
+      $("#email").keyup(function(){
+         if(validateEmail())
+         {
+            $("#email").css("border","2px solid green");
+            $("#emailMsg").html("<p class='text-success' style='padding-left:20px; top:0;'></p>");
+         }
+         else
+         {
+            $("#email").css("border","2px solid red");
+            $("#emailMsg").html("<p class='text-danger' style='padding-left:20px; top:0;'></p>");
+         }
+      });
+
+      //Name Validation*
+      $("#name").keyup(function(){
+         if(validateName())
+         {
+            $("#name").css("border","2px solid green");
+            $("#nameMsg").html("<p class='text-success'  style='padding-left:20px; top:0;'></p>");
+         }
+         else
+         {
+            $("#name").css("border","2px solid red");
+            $("#nameMsg").html("<p class='text-danger' style='padding-left:20px; top:0;'></p>");
+         }
+      });
+
+      //Mobile Number Validation
+      $("#mobile").keyup(function(){
+         if(validateMno())
+         {
+            $("#mobile").css("border","2px solid green");
+            $("#mobileMsg").html("<p class='text-success' style='padding-left:20px; top:0;'></p>");
+         }
+         else
+         {
+            $("#mobile").css("border","2px solid red");
+            $("#mobileMsg").html("<p class='text-danger' style='padding-left:20px; top:0;'></p>");
+         }
+      });
+
+      //Password Validation
+      $("#password").keyup(function(){
+         if(validatePassword())
+         {
+            $("#password").css("border","2px solid green");
+            $("#passwordMsg").html("<p class='text-success'  style='padding-left:20px; top:0;'></p>");
+         }
+         else
+         {
+            $("#password").css("border","2px solid red");
+            $("#passwordMsg").html("<p class='text-danger' style='padding-left:20px; top:0;'></p>");
+         }
+      });
+   });
+
+   //Functions for Validations
+
+      function buttonState()
+      {
+         if(validateRoll() && validateUid() && validateEmail() && validateName() && validateMno()  && validatePassword() )
+         {
+           // $("#submit").show();
+            $('#submit').attr("disabled",false);
+         }
+         else
+         {
+           // $("#submit").hide();
+           $('#submit').attr("disabled",true);
+         }
+
+      }
+
+
+      function validateRoll()
+      {
+                  var roll_no=$("#rollno").val();
+                  if(roll_no.length==6)
+        {
+                        return true;
+                  }
+        else
+        {
+                        return false;
+           file:///exports       }
+      }
+
+      function validateEmail()
+      {
+                  var email=$("#email").val();
+             var reg_email = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+                  if(reg_email.test(email))
+        {
+                        return true;
+                  }
+        else
+        {
+                        return false;
+                  }
+      }
+
+      function validateName()
+      {
+                  var name=$("#name").val();
+        var reg_name =  /^([\w]{3,})+\s+([\w\s]{3,})+$/i
+                  if(name.length>2)
+        {
+          if(reg_name.test(name))
+           {
+            return true;
+           }
+                    else
+           {
+            return false;
+           }
+                  }
+        else
+        {
+                        return false;
+                  }
+      }
+
+      function validatemobile()
+      {
+                  var m_no=$("#mobile").val();
+                  if(m_no.length==10)
+        {
+                        return true;
+                  }
+        else
+        {
+                        return false;
+                  }
+      }
+
+
+       function validatePassword()
+      {
+                  var password=$("#password").val();
+        var reg_password=/^[a-zA-Z0-9!@#$%^&*]{6,16}$/
+                  if(reg_password.test(password))
+        {
+                        return true;
+                  }
+        else
+        {
+                        return false;
+                  }
+      }
+-- INSERT --                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           10,1          Top
+

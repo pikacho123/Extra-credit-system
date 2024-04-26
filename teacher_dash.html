@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student List</title>
+  <link rel="stylesheet" href="teacher_dash.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Teacher</h2>
+    <ul>
+      <li><a href="teacher_dash.html">Home</a></li>
+      <li><a href="teacherprof.php">Profile</a></li>
+      <li><a href="approve.php">Certification</a></li>
+      <li><a href="onboarding.html">Logout</a></li>
+    </ul>
+  </div>
+  
+  <div class="main">
+    <h1>Student List</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+        <p></p>            
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Student UID</th>
+          <th>Department</th>
+          <th>Academic Year</th>
+          <th>Credits Earned</th>
+          <th>Credits Remaining</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="studentName">Saurabh Pawar</td>
+          <td>123456</td>
+          <td>Computer Science</td>
+          <td>TYBsc</td>
+          <td>6</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td class="studentName">Seshwar j</td>
+          <td>789012</td>
+          <td>Computer Science</td>
+          <td>SYbsc</td>
+          <td>5</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td class="studentName">Chanchal pathak</td>
+          <td>345678</td>
+          <td>Computer Science</td>
+          <td>FYBsc</td>
+          <td>4</td>
+          <td>4</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="popup">
+  <div class="popup-content">
+    <span class="close" id="closeBtn">&times;</span>
+    <h2 id="selectedName"></h2>
+    <p id="selectedID"></p>
+    <p id="selectedDepartment"></p>
+    <p id="selectedAcademicYear"></p>
+    <form>
+      <label for="creditsEarnedInput">Credits Earned:</label>
+      <input type="number" id="creditsEarnedInput" name="creditsEarned" required>
+      <button type="submit" id="submitBtn">Submit</button>
+    </form>
+    <p id="selectedCreditsRemaining"></p>
+    <p id="selectedDocsUploaded"></p>
+  </div>
+</div>
+
+
+  <script src="teacher_dash.js"></script>
+</body>
+</html>

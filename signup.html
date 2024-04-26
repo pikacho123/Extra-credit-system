@@ -1,0 +1,75 @@
+<?php
+
+include 'Connection.php';
+
+?
+?>
+<html>
+   <head>
+      <title>Student Registration</title>
+      <link rel="stylesheet" type="text/css" href="signup.css">
+   </head>
+   <body>
+     <h1>Student Registration</h1>
+	
+     <div class="form">
+     <form id="registration-form" action="signuup.php" method="POST">
+	 <div>
+	   <label for="stud_name">Name:</label>
+	   <input type="text" id="stud_name" name="stud_name" required>
+	 </div>
+	 <div>
+		 <label for="stud_rollno">Roll No:</label>
+                 <input type="text" id="stud_rollno" name="stud_rollno" required>
+	 </div>
+	<div>
+		 <label for="stud_dob">Date of Birth:</label>
+		 <input type="date" id="stud_dob" name="stud_dob" required>
+	 </div> 
+	<div>
+		 <label for="stud_gender">Gender:</label>
+		 <select id="stud_gender" name="stud_gender" required>
+			 <option value="">Select</option>
+			 <option value="male">Male</option>
+			 <option value="female">Female</option>
+			 <option value="other">Other</option>
+		 </select>
+	</div>
+	<div>
+           <label for="stud_mobile_no">Mobile Number:</label>
+	   <input type="tel" id="stud_mobile_no" name="stud_mobile_no" required>
+	 </div>
+	<div>
+		<label for="stud_email">Email:</label>
+		<input type="email" id="stud_email" name="stud_email" required>
+	</div>
+	 <div>
+		 <label for="stud_acadyear">Academic Year:</label>
+		 <input type="text" id="stud_acadyear" name="stud_acadyear" required>
+         </div> 
+	 <div>
+	   <label for="stud_dept">Department:</label>
+	   <input type="text" id="stud_dept" name="stud_dept" required>
+	 </div>
+		<div>
+		<label for="stud_uid">UID:</label>
+		<input type="text" id="stud_uid" name="stud_uid" required>
+	</div>	 
+	<div>
+		<label for="stud_pass">Password:</label>
+		<input type="password" id="stud_pass" name="stud_pass" required>
+	</div>
+
+	<div>
+		<input type="submit" name="submit" value="Sign Up">
+	</div>
+     </div>
+	
+     </form>
+
+   </body>
+</html>
+
+>
+
+

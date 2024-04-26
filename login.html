@@ -1,0 +1,20 @@
+<head>
+	<link rel="stylesheet" type+"text/css" href="login.css">
+</head>
+<body>
+	<div class="page-center"><div>
+	<div class="login-container">
+		<form id="login-form" action="login.php" method="POST">
+			<h2>Student Login</h2>
+			<label for="username">Username:</label>
+			<input type="text" id="username" name ="UID" placeholder="Enter your username" required>
+			<label for="password">Password:</label>
+			<input type="password" id="password"  name = "password" placeholder="Enter your password" required>
+			<button type="submit" id="login-btn">Log In</button>
+			<a href="forgotpass.php" class="forgotpass">Forgot Password?</a>
+			<div id="error-message"></div>
+			<p> Don't have an account?<a href="signup.php">Sign Up</a></p>
+		</form>
+	</div>
+	<!--<script type="text/javascript" src="login.js"></script>-->
+</body>

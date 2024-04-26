@@ -1,0 +1,46 @@
+body {
+    display: flex;
+  }
+  
+  header {
+    background-color:#358d9d;
+    color: #fff;
+    width: 150px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    display: block;
+  }
+  
+  .header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+  }
+  
+  .col-4 {
+    flex: 4;
+    background-color: rgba(248, 246, 246);
+    padding: 20px;
+  }
+  input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+#submitBtn {
+	margin-top: 20px;
+}
+
+#creditCount {
+	font-weight: bold;
+}

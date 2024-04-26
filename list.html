@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="list.css">
+</head>
+
+<body>
+  <header>
+    <a href="dash.php">Home</a>
+    <a href="prof.php">Profile</a>
+    <a href="list.html">List of Courses</a>
+    <a href="selectcourse.php">Certificates</a>
+    <a href="onboarding.html">Log Out</a>
+    
+  </header>
+  <main>
+      <div class="col-4">
+          <div class="main">
+            <form id="select-course" action="list.php" method="POST">
+              <h1>Select Courses</h1>
+              <ul id="courseList">
+                  <li data-credits="4"><input type="checkbox" name="course[]" value="SOEC"> SOEC (4 credits)</li>
+                  <li data-credits="3"><input type="checkbox" name="course[]" value="INTERNSHIP"> INTERNSHIP (3 credits)</li>
+                  <li data-credits="1"><input type="checkbox" name="course[]" value="SPORTS"> SPORTS (1 credit)</li>
+                  <li data-credits="2"><input type="checkbox" name="course[]" value="WEBDEVELOPMENT"> WEBDEVELOPMENT (2 credits)</li>
+                  <li data-credits="2"><input type="checkbox" name="course[]" value="CERTIFICATE COURSE"> CERTIFICATE COURSE (2 credits)</li>
+              </ul>
+              <button id="submitBtn">Submit Courses</button>
+              <p id="creditCount">Total Credits Selected: 0</p>
+  </form>
+          </div>
+          <script src="list.js"></script>
+      </body>
+      </html>
